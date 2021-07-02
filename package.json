@@ -1,0 +1,29 @@
+{
+  "name": "imgbox",
+  "version": "1.0.0",
+  "description": "Unofficial library for uploading images to imgbox.com",
+  "main": "./lib/index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0wx/imgbox.git"
+  },
+  "keywords": ["imgbox", "image", "cloud", "upload"],
+  "author": "0wx",
+  "license": "ISC",
+  "homepage": "https://github.com/0wx/imgbox#readme",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/is-url": "^1.2.29",
+    "@types/node": "^15.14.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "form-data": "^4.0.0",
+    "is-url": "^1.2.4"
+  }
+}
