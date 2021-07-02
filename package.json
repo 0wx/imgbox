@@ -1,12 +1,13 @@
 {
   "name": "imgbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unofficial library for uploading images to imgbox.com",
   "main": "./lib/index.js",
   "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
