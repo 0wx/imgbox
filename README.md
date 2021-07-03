@@ -4,7 +4,7 @@
 An unofficial library to easily upload files to [imgbox.com](https://imgbox.com)
 
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/0wx/imgbox.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/0wx/imgbox/context:javascript)
-![npm](https://img.shields.io/npm/v/imgbox?color=00df00)
+[![npm](https://img.shields.io/npm/v/imgbox?color=00df00)](https://npmjs.com/package/imgbox)
 
 ## Installation 
 
