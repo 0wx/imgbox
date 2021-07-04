@@ -2,14 +2,6 @@ import Imgbox from './Imgbox'
 import axios from 'axios'
 import toFormatArray from './toFormatArray'
 
-interface Images {
-  filename: string
-  buffer: Buffer
-}
-interface ImagesURL {
-  filename: string,
-  url: string
-}
 const _imgbox = new Imgbox()
 
 const getImagesList = async (list: string[]): Promise<Images[]> => {
@@ -35,11 +27,7 @@ interface Result {
   message?: string
 }
 
-type Files = 
-  string[] | string |
-  Buffer[] | Buffer |
-  Images[] | Images |
-  ImagesURL[] | ImagesURL 
+
 export async function imgbox(images: Files): Promise<Result> {
   const { code, data } = toFormatArray(images)
   if (!code) throw new Error('Invalid input type')

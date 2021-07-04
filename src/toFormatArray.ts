@@ -1,10 +1,6 @@
 import isUrl from 'is-url'
 import crypto from 'crypto'
 
-interface Upload {
-  code: number
-  data: any[]
-}
 
 export default function (data: any): Upload {
   // data = 'https://url.images'

@@ -2,20 +2,6 @@ import axios from 'axios'
 import { AxiosInstance } from 'axios'
 import FormData from 'form-data'
 
-interface Token {
-  ok: boolean
-  token_id: number
-  token_secret: string
-  gallery_id: string
-  gallery_secret: string
-  message?: string
-}
-
-interface Images {
-  filename: string
-  buffer: Buffer
-}
-
 class Imgbox {
   token!: {
     token_id: number
@@ -76,7 +62,7 @@ class Imgbox {
     this.setConfig(csrf, cookie)
   }
 
-  upload = async (images: Images[]): Promise<any> => {
+  upload = async (images: Images[]): Promise<FinalResult> => {
     const form = new FormData()
 
     form.append('token_id', this.token.token_id)
@@ -125,7 +111,9 @@ class Imgbox {
     }
   }
 
-  init = async (): Promise<any> => {
+  // IDK what kind of type definition I had to fill in this function
+  // Dear future me forgive meeee :'<
+  init = async (): Promise<Function> => {
     await this.getAuthenticityToken()
     await this.getToken()
     return this.upload
