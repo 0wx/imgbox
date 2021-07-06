@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { AxiosInstance } from 'axios'
 import FormData from 'form-data'
-
+import { Token, Images, FinalResult } from 'types-imgbox'
 class Imgbox {
   token!: {
     token_id: number

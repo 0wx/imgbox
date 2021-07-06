@@ -1,6 +1,6 @@
 import isUrl from 'is-url'
 import crypto from 'crypto'
-
+import { Upload } from 'types-imgbox'
 
 export default function (data: any): Upload {
   // data = 'https://url.images'
