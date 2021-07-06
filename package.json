@@ -1,9 +1,9 @@
 {
   "name": "imgbox",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Unofficial library for uploading images to imgbox.com",
   "main": "lib/index.js",
-  "types": "index.d.ts",
+  "types": "types.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
