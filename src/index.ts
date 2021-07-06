@@ -1,7 +1,7 @@
 import Imgbox from './Imgbox'
 import axios from 'axios'
 import toFormatArray from './toFormatArray'
-
+import crypto from 'crypto'
 interface Images {
   filename: string
   buffer: Buffer
@@ -24,10 +24,15 @@ const getImagesList = async (list: string[]): Promise<Images[]> => {
       responseType: 'arraybuffer',
     })
     const buffer = response.data
-    const filename = response.headers['content-disposition']
-      .split('filename="')[1]
-      .split('"')[0]
-    result.push({ buffer, filename })
+    try {
+      const filename = response.headers['content-disposition']
+        .split('filename="')[1]
+        .split('"')[0]
+      result.push({ buffer, filename })
+    } catch (error) {
+      const filename = crypto.randomUUID() + '.jpg'
+      result.push({ buffer, filename })
+    }
   }
 
   return result
