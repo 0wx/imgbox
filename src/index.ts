@@ -1,7 +1,20 @@
 import Imgbox from './Imgbox'
 import axios from 'axios'
 import toFormatArray from './toFormatArray'
-import { Images, Files } from 'types-imgbox'
+
+interface Images {
+  filename: string
+  buffer: Buffer
+}
+
+type Files =
+  | string[]
+  | string
+  | Buffer[]
+  | Buffer
+  | Images[]
+  | Images
+
 const _imgbox = new Imgbox()
 
 const getImagesList = async (list: string[]): Promise<Images[]> => {

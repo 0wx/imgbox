@@ -1,7 +1,25 @@
 import axios from 'axios'
 import { AxiosInstance } from 'axios'
 import FormData from 'form-data'
-import { Token, Images, FinalResult } from 'types-imgbox'
+
+interface FinalResult {
+  ok: boolean
+  message?: string
+  gellery_edit?: string
+  files?: any[]
+}
+interface Token {
+  ok: boolean
+  token_id: number
+  token_secret: string
+  gallery_id: string
+  gallery_secret: string
+  message?: string
+}
+interface Images {
+  filename: string
+  buffer: Buffer
+}
 class Imgbox {
   token!: {
     token_id: number
