@@ -8,7 +8,7 @@ interface Images {
 }
 interface Url {
   filename: string
-  url: Buffer
+  url: string
 }
 type Files =
   | string[]
