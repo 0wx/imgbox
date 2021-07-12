@@ -111,6 +111,8 @@ class Imgbox {
         Referer: 'https://imgbox.com/',
         'Sec-GPC': 1,
       },
+      maxContentLength: Infinity,
+      maxBodyLength: Infinity,
     }
     try {
       const { data } = await this.client.post('/upload/process', form, config)
