@@ -20,6 +20,11 @@ interface Images {
   filename: string
   buffer: Buffer
 }
+
+interface Url {
+  filename: string
+  url: Buffer
+}
 class Imgbox {
   token!: {
     token_id: number

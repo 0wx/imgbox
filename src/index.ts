@@ -6,7 +6,10 @@ interface Images {
   filename: string
   buffer: Buffer
 }
-
+interface Url {
+  filename: string
+  url: Buffer
+}
 type Files =
   | string[]
   | string
@@ -14,6 +17,8 @@ type Files =
   | Buffer
   | Images[]
   | Images
+  | Url[]
+  | Url
 
 const _imgbox = new Imgbox()
 

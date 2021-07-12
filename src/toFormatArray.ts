@@ -27,7 +27,7 @@ export default function (data: any): Upload {
 
   // data = [{ filename: 'asda.jpg', url: 'https://' }, { filename: 'asda.jpg', url: 'https://'}]
   const isObjectWithUrl = data.every(
-    (value: { filename: any; url: string }) => {
+    (value: { filename: string; url: string }) => {
       return value.filename && isUrl(value.url)
     }
   )
